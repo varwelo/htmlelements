@@ -1,0 +1,23 @@
+{
+    "name": "varwelo/htmlelements",
+    "description": "My Pet Project",
+    "type": "library",
+    "license": "Unlicense",
+    "autoload": {
+        "psr-4": {
+            "HtmlElements\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aaron White"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "=7.4.30"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
