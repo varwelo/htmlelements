@@ -16,12 +16,12 @@ class SelectTagTest extends TestCase
 
     }
 
-    public function testToStringAfterConstruct()
+    public function testRenderAfterConstruct()
     {
         $this->assertSame('<select></select>', $this->obj->render());
     }
 
-    public function testToStringAfterAdd()
+    public function testRenderAfterAdd()
     {
         $optionTag = (new \HtmlElements\OptionTag())->setContent('item1');
         $this->obj->add($optionTag);

@@ -16,7 +16,7 @@ class InputTagTest extends TestCase
 
     }
 
-    public function testToStringAfterConstruct()
+    public function testRenderAfterConstruct()
     {
         $this->assertSame('<input>', $this->obj->render());
     }

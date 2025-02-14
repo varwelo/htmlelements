@@ -16,12 +16,12 @@ class TextareaTagTest extends TestCase
 
     }
 
-    public function testToStringAfterConstruct()
+    public function testRenderAfterConstruct()
     {
         $this->assertSame('<textarea></textarea>', $this->obj->render());
     }
 
-    public function testToStringAfterSetContent()
+    public function testRenderAfterSetContent()
     {
         $this->obj->setContent('foobar');
         $this->assertSame('<textarea>foobar</textarea>', $this->obj->render());
