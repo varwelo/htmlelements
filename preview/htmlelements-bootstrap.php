@@ -43,10 +43,10 @@ $button = (new \HtmlElements\Base\ElementSEC('button'))
 
 
 echo $div->startTag() .PHP_EOL;
-echo $input .PHP_EOL;
-echo $label .PHP_EOL;
+echo $input->render() .PHP_EOL;
+echo $label->render() .PHP_EOL;
 echo $div->endTag() .PHP_EOL;
-echo $button;
+echo $button->render();
 
 
 
