@@ -3,7 +3,10 @@
 namespace HtmlElements;
 
 class SelectTag extends Base\ElementSESpecialC
-{   
+{
+    /**
+     * @var OptionTag[]
+     */
     private array $options = [];
 
     public function __construct()
@@ -11,7 +14,7 @@ class SelectTag extends Base\ElementSESpecialC
         parent::__construct('select');
     }
 
-    public function __toString(): string
+    public function render(): string
     {       
         return $this->startTag().$this->getOptionsStr().$this->endTag();
     }
@@ -26,7 +29,7 @@ class SelectTag extends Base\ElementSESpecialC
     {
         $result = '';
         foreach ($this->options as $option) {
-            $result .= $option;
+            $result .= $option->render();
         }
 
         return $result;

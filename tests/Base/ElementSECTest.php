@@ -16,9 +16,9 @@ class ElementSECTest extends TestCase
 
     }
 
-    public function testToString()
+    public function testRender()
     {
         $this->obj->setContent('text');
-        $this->assertSame('<textarea>text</textarea>', (string)$this->obj);
+        $this->assertSame('<textarea>text</textarea>', $this->obj->render());
     }
 }

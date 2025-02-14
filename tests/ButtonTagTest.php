@@ -16,14 +16,14 @@ class ButtonTagTest extends TestCase
 
     }
 
-    public function testToStringAfterConstruct()
+    public function testRenderAfterConstruct()
     {
-        $this->assertSame('<button></button>', (string)$this->obj);
+        $this->assertSame('<button></button>', $this->obj->render());
     }
 
-    public function testToStringAfterSetContent()
+    public function testRenderAfterSetContent()
     {
         $this->obj->setContent('foobar');
-        $this->assertSame('<button>foobar</button>', (string)$this->obj);
+        $this->assertSame('<button>foobar</button>', $this->obj->render());
     }
 }

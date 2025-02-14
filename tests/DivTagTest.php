@@ -16,14 +16,14 @@ class DivTagTest extends TestCase
 
     }
 
-    public function testToStringAfterConstruct()
+    public function testRenderAfterConstruct()
     {
-        $this->assertSame('<div></div>', (string)$this->obj);
+        $this->assertSame('<div></div>', $this->obj->render());
     }
 
-    public function testToStringAfterSetContent()
+    public function testRenderAfterSetContent()
     {
         $this->obj->setContent('foobar');
-        $this->assertSame('<div>foobar</div>', (string)$this->obj);
+        $this->assertSame('<div>foobar</div>', $this->obj->render());
     }
 }

@@ -18,12 +18,12 @@ class LabelTagTest extends TestCase
 
     public function testToStringAfterConstruct()
     {
-        $this->assertSame('<label></label>', (string)$this->obj);
+        $this->assertSame('<label></label>', $this->obj->render());
     }
 
     public function testToStringAfterSetContent()
     {
         $this->obj->setContent('foobar');
-        $this->assertSame('<label>foobar</label>', (string)$this->obj);
+        $this->assertSame('<label>foobar</label>', $this->obj->render());
     }
 }

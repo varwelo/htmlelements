@@ -6,7 +6,7 @@ class ElementS implements iStartTag
 {   
     use tStartTag;
 
-    public function __toString(): string
+    public function render(): string
     {
         return $this->startTag();
     }

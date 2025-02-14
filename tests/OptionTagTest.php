@@ -18,12 +18,12 @@ class OptionTagTest extends TestCase
 
     public function testToStringAfterConstruct()
     {
-        $this->assertSame('<option></option>', (string)$this->obj);
+        $this->assertSame('<option></option>', $this->obj->render());
     }
 
     public function testToStringAfterSetSelected()
     {
         $this->obj->setSelected();
-        $this->assertSame('<option selected></option>', (string)$this->obj);
+        $this->assertSame('<option selected></option>', $this->obj->render());
     }
 }

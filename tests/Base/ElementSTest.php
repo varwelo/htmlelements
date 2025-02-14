@@ -16,8 +16,8 @@ class ElementSTest extends TestCase
 
     }
 
-    public function testToString()
+    public function testRender()
     {
-        $this->assertSame('<input>', (string)$this->obj);
+        $this->assertSame('<input>', $this->obj->render());
     }
 }

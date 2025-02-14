@@ -6,5 +6,5 @@ abstract class ElementSESpecialC implements iStartTag, iEndTag
 {   
     use tStartTag, tEndTag;
     
-    abstract public function __toString();
+    abstract public function render();
 }
