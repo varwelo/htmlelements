@@ -8,7 +8,7 @@ class ButtonTagTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->obj = new \HtmlElements\ButtonTag();
+        $this->obj = new \HtmlElements\Button\ButtonTag();
     }
 
     protected function tearDown(): void

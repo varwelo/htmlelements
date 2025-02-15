@@ -1,6 +1,8 @@
 <?php
 
-namespace HtmlElements;
+namespace HtmlElements\Button;
+
+use HtmlElements\Base;
 
 class ButtonTag extends Base\ElementSEC
 {
