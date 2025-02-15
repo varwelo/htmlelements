@@ -8,7 +8,7 @@ class tEndTagTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->obj = new class ('textarea') { use \HtmlElements\Base\tStartTag; use \HtmlElements\Base\tEndTag; }; // anonymous class
+        $this->obj = new class ('textarea') { use \HtmlElements\Base\tStartTag; use \HtmlElements\Base\tEndTag; };
     }
 
     protected function tearDown(): void

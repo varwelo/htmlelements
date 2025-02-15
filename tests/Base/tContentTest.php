@@ -69,7 +69,7 @@ class tContentTest extends TestCase
      */
     public function testSetContentWithTypeError($value)
     {
-        $this->expectException(TypeError::class); // теж рахується як Assertion в phpunit
+        $this->expectException(TypeError::class);
         $this->obj->setContent($value);
     }
 

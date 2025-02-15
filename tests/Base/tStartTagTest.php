@@ -12,7 +12,7 @@ class tStartTagTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->obj = new class ('input') { use \HtmlElements\Base\tStartTag; }; // anonymous class
+        $this->obj = new class ('input') { use \HtmlElements\Base\tStartTag; };
     }
 
     protected function tearDown(): void
