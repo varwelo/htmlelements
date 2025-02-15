@@ -18,6 +18,12 @@ class ResetButtonTagTest extends TestCase
 
     public function testRenderAfterConstruct()
     {
+        $this->assertSame('<button type="reset"></button>', $this->obj->render());
+    }
+
+    public function testRenderAfterSetContent()
+    {
+        $this->obj->setContent('Reset');
         $this->assertSame('<button type="reset">Reset</button>', $this->obj->render());
     }
 }
