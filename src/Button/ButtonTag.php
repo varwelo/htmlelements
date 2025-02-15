@@ -1,14 +1,14 @@
 <?php
 
+
 namespace HtmlElements\Button;
 
 use HtmlElements\Base;
 
-class ButtonTag extends BaseButtonTag
+class ButtonTag extends Base\ElementSEC
 {
     public function __construct()
     {
-        parent::__construct();
-        $this->setAttr('type', 'button');
+        parent::__construct('button');
     }
 }

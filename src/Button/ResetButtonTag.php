@@ -4,11 +4,11 @@
 namespace HtmlElements\Button;
 
 
-class ResetButtonTag extends BaseButtonTag
+class ResetButtonTag extends ButtonTag
 {
     public function __construct()
     {
         parent::__construct();
-        $this->setAttr('type', 'reset');
+        $this->setContent('Reset')->setAttr('type', 'reset');
     }
 }

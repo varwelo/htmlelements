@@ -4,11 +4,11 @@
 namespace HtmlElements\Button;
 
 
-class SubmitButtonTag extends BaseButtonTag
+class SubmitButtonTag extends ButtonTag
 {
     public function __construct()
     {
         parent::__construct();
-        $this->setAttr('type', 'submit');
+        $this->setContent('Submit')->setAttr('type', 'submit');
     }
 }

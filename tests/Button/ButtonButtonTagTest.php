@@ -2,13 +2,13 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ResetButtonTagTest extends TestCase
+class ButtonButtonTagTest extends TestCase
 {
     private $obj;
 
     protected function setUp(): void
     {
-        $this->obj = new \HtmlElements\Button\ResetButtonTag();
+        $this->obj = new \HtmlElements\Button\ButtonButtonTag();
     }
 
     protected function tearDown(): void
@@ -18,6 +18,6 @@ class ResetButtonTagTest extends TestCase
 
     public function testRenderAfterConstruct()
     {
-        $this->assertSame('<button type="reset">Reset</button>', $this->obj->render());
+        $this->assertSame('<button type="button">Button</button>', $this->obj->render());
     }
 }

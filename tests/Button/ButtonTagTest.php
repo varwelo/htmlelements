@@ -18,12 +18,17 @@ class ButtonTagTest extends TestCase
 
     public function testRenderAfterConstruct()
     {
-        $this->assertSame('<button type="button"></button>', $this->obj->render());
+        $this->assertSame('<button></button>', $this->obj->render());
+    }
+
+    public function testNameAfterConstruct()
+    {
+        $this->assertSame('button', $this->obj->getName());
     }
 
     public function testRenderAfterSetContent()
     {
-        $this->obj->setContent('Button');
-        $this->assertSame('<button type="button">Button</button>', $this->obj->render());
+        $this->obj->setContent('foobar');
+        $this->assertSame('<button>foobar</button>', $this->obj->render());
     }
 }
