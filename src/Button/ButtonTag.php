@@ -4,11 +4,11 @@ namespace HtmlElements\Button;
 
 use HtmlElements\Base;
 
-class ButtonTag extends Base\ElementSEC
+class ButtonTag extends BaseButtonTag
 {
     public function __construct()
     {
-        parent::__construct('button');
-        $this->setContent('Button');
+        parent::__construct();
+        $this->setContent('Button')->setAttr('type', 'button');
     }
 }

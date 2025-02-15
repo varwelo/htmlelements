@@ -4,7 +4,7 @@
 namespace HtmlElements\Button;
 
 
-class ResetButtonTag extends ButtonTag
+class ResetButtonTag extends BaseButtonTag
 {
     public function __construct()
     {

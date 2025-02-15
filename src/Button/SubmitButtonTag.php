@@ -4,7 +4,7 @@
 namespace HtmlElements\Button;
 
 
-class SubmitButtonTag extends ButtonTag
+class SubmitButtonTag extends BaseButtonTag
 {
     public function __construct()
     {
