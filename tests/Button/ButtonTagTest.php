@@ -18,7 +18,7 @@ class ButtonTagTest extends TestCase
 
     public function testRenderAfterConstruct()
     {
-        $this->assertSame('<button></button>', $this->obj->render());
+        $this->assertSame('<button>Button</button>', $this->obj->render());
     }
 
     public function testRenderAfterSetContent()
