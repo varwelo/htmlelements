@@ -2,13 +2,13 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ButtonsDivTest extends TestCase
+class DivTagForButtonsTest extends TestCase
 {
     private $obj;
 
     protected function setUp(): void
     {
-        $this->obj = new \HtmlElements\Special\ButtonsDiv();
+        $this->obj = new \HtmlElements\Special\DivTagForButtons();
     }
 
     protected function tearDown(): void

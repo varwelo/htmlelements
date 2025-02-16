@@ -5,7 +5,7 @@ namespace HtmlElements\Special;
 use HtmlElements\Base;
 use HtmlElements\Button\ButtonTag;
 
-class ButtonsDiv extends Base\ElementSESpecialC
+class DivTagForButtons extends Base\ElementSESpecialC
 {
     /**
      * @var ButtonTag[]
