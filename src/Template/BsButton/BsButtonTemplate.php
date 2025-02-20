@@ -4,7 +4,6 @@
 namespace HtmlElements\Template\BsButton;
 
 
-
 use HtmlElements\Exception\BsButtonTemplateException;
 use HtmlElements\Tag\Tag\ButtonTag;
 
