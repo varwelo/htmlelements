@@ -2,7 +2,12 @@
 
 namespace HtmlElements\Base;
 
-class ElementSE implements iStartTag, iEndTag
+class ElementSE extends BaseElementS
 {   
-    use tStartTag, tEndTag;
+    public function endTag(): string
+    {
+        return "</{$this->name}>";
+    }
+
+    // The render() function is not used
 }

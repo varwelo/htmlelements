@@ -2,9 +2,20 @@
 
 namespace HtmlElements\Base;
 
-class ElementSEC implements iStartTag, iContent, iEndTag
+class ElementSEC extends ElementSE
 {   
-    use tStartTag, tContent, tEndTag;
+    private string $content = '';
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
+        return $this;
+    }
+
+    public function getContent(): string
+    {
+        return $this->content;
+    }
 
     public function render(): string
     {

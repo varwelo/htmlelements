@@ -2,29 +2,9 @@
 
 namespace HtmlElements\Base;
 
-trait tStartTag 
+trait tTagAttrs
 {
-    private string $name;
-
     private array $attrs = [];
-    
-
-    public function __construct(string $name)
-    {
-        $this->name = $name;
-    }
-
-    
-    public function startTag(): string
-    {
-        return "<{$this->name}{$this->getAttrsStr()}>";
-    }
-
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
 
     
     /* --- Робота з атрибутами (та атрибутом class) BEGIN --- */

@@ -2,7 +2,7 @@
 
 namespace HtmlElements\Base;
 
-interface iStartTag
+interface iTagAttrs
 {
     public function startTag(): string;
 
@@ -18,5 +18,5 @@ interface iStartTag
 
     public function addClass(string $className): self;
 
-    public function removeClass(string $className);
+    public function removeClass(string $className): self;
 }

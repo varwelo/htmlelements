@@ -2,10 +2,8 @@
 
 namespace HtmlElements\Base;
 
-class ElementS implements iStartTag
+class ElementS extends BaseElementS
 {   
-    use tStartTag;
-
     public function render(): string
     {
         return $this->startTag();

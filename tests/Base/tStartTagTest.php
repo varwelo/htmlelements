@@ -12,30 +12,13 @@ class tStartTagTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->obj = new class ('input') { use \HtmlElements\Base\tStartTag; };
+        $this->obj = new class () { use \HtmlElements\Base\tTagAttrs; };
     }
 
     protected function tearDown(): void
     {
 
     }
-
-    public function testNameAfterConstruct()
-    {
-        $this->setAccessToPrivateProperty($this->obj, 'name');
-        $this->assertSame('input', $this->privateProperty->getValue($this->obj));
-    }
-
-    public function testStartTagAfterConstruct()
-    {
-        $this->assertSame('<input>', $this->obj->startTag());
-    }
-
-    public function testGetNameAfterConstruct()
-    {
-        $this->assertSame('input', $this->obj->getName());
-    }
-
 
     /* [-- Attributes --- */
     public function testGetAttrWithStrValue()
@@ -77,24 +60,6 @@ class tStartTagTest extends TestCase
 
         $this->obj->setAttrs(['name' => 'bar', 'disabled' => true]);
         $this->assertSame(['name' => 'bar', 'required' => true, 'disabled' => true], $this->privateProperty->getValue($this->obj));
-    }
-
-    public function testStartTagIfIssetAttr()
-    {
-        $this->obj->setAttr('name', 'foo');
-        $this->assertSame('<input name="foo">', $this->obj->startTag());
-    }
-
-    public function testStartTagIfIssetAttrWithTrueValue()
-    {
-        $this->obj->setAttr('required');
-        $this->assertSame('<input required>', $this->obj->startTag());
-    }
-
-    public function testStartTagIfIssetAttrs()
-    {
-        $this->obj->setAttr('name', 'foo')->setAttr('required')->setAttr('id', 'bar')->setAttr('disabled');
-        $this->assertSame('<input name="foo" required id="bar" disabled>', $this->obj->startTag());
     }
 
     public function testRemoveAttrIfIssetTheAttr()
@@ -144,26 +109,30 @@ class tStartTagTest extends TestCase
     /* [-- Classes --- */
     public function testAddClass()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
         $this->obj->addClass('foo');
-        $this->assertSame('<input class="foo">', $this->obj->startTag());
+        $this->assertSame('foo', $this->privateProperty->getValue($this->obj)['class']);
     }
 
     public function testAddClassAgain()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
         $this->obj->addClass('foo')->addClass('foo');
-        $this->assertSame('<input class="foo">', $this->obj->startTag());
+        $this->assertSame('foo', $this->privateProperty->getValue($this->obj)['class']);
     }
 
     public function testRemoveClass()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
         $this->obj->addClass('foo')->removeClass('foo');
-        $this->assertSame('<input>', $this->obj->startTag());
+        $this->assertArrayNotHasKey('class', $this->privateProperty->getValue($this->obj));
     }
 
     public function testRemoveClassIfTheClassNotExists()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
         $this->obj->addClass('foo')->removeClass('bar');
-        $this->assertSame('<input class="foo">', $this->obj->startTag());
+        $this->assertSame('foo', $this->privateProperty->getValue($this->obj)['class']);
     }
 
     /* [[-- Multiple add/remove ---- */
@@ -171,32 +140,37 @@ class tStartTagTest extends TestCase
        This can lead to duplication of classes */
     public function testAddClassMultiple()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
         $this->obj->addClass('foo')->addClass('bar baz');
-        $this->assertSame('<input class="foo bar baz">', $this->obj->startTag());
+        $this->assertSame('foo bar baz', $this->privateProperty->getValue($this->obj)['class']);
     }
 
     public function testRemoveClassMultipleNotWorking()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
+
         $this->obj->addClass('foo')->addClass('bar')->addClass('baz');
 
         $this->obj->removeClass('bar baz');
-        $this->assertSame('<input class="foo bar baz">', $this->obj->startTag());
+        $this->assertSame('foo bar baz', $this->privateProperty->getValue($this->obj)['class']);
 
         $this->obj->removeClass('foo bar baz');
-        $this->assertSame('<input class="foo bar baz">', $this->obj->startTag());
+        $this->assertSame('foo bar baz', $this->privateProperty->getValue($this->obj)['class']);
     }
 
     public function testAddClassMultipleWithDuplicate()
     {
+        $this->setAccessToPrivateProperty($this->obj,'attrs');
+
         $this->obj->addClass('foo')->addClass('foo bar');
-        $this->assertSame('<input class="foo foo bar">', $this->obj->startTag());
+        $this->assertSame('foo foo bar', $this->privateProperty->getValue($this->obj)['class']);
 
         // only one class duplicate is deleted
         $this->obj->removeClass('foo');
-        $this->assertSame('<input class="foo bar">', $this->obj->startTag());
+        $this->assertSame('foo bar', $this->privateProperty->getValue($this->obj)['class']);
 
         $this->obj->addClass('foo bar');
-        $this->assertSame('<input class="foo bar foo bar">', $this->obj->startTag());
+        $this->assertSame('foo bar foo bar', $this->privateProperty->getValue($this->obj)['class']);
     }
     /* ---- Multiple add/remove --]] */
     /* --- Classes --] */
