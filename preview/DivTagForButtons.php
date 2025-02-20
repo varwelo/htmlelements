@@ -6,11 +6,11 @@ echo '<h1>DivTagForButtons</h1>';
 
 echo '<hr>'.PHP_EOL;
 
-$button1 = new \HtmlElements\Button\ButtonButtonTag();
-$button2 = new \HtmlElements\Button\ResetButtonTag();
-$button3 = new \HtmlElements\Button\SubmitButtonTag();
+$button1 = new \HtmlElements\Tag\TagPlus\Button\ButtonButtonTag();
+$button2 = new \HtmlElements\Tag\TagPlus\Button\ResetButtonTag();
+$button3 = new \HtmlElements\Tag\TagPlus\Button\SubmitButtonTag();
 
-$buttonsDiv = new \HtmlElements\Special\DivTagForButtons();
+$buttonsDiv = new \HtmlElements\Tag\SpecialTag\DivTagForButtons();
 $buttonsDiv->addButton($button1)->addButton($button2)->addButton($button3);
 
 echo $buttonsDiv->render();

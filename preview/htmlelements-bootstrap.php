@@ -22,21 +22,21 @@ include HEADER;
 <strong>За допомогою HtmlElements</strong>
 
 <?php
-$div = (new \HtmlElements\Base\SECTag('div'))
+$div = (new \HtmlElements\Tag\Base\SECTag('div'))
     ->addClass('form-check');
 
-$input = (new \HtmlElements\InputTag())
+$input = (new \HtmlElements\Tag\Tag\InputTag())
     ->addClass('form-check-input')
     ->setAttr('type', 'checkbox')
     ->setAttr('value', '')
     ->setAttr('id', 'flexCheckDefault');
 
-$label = (new \HtmlElements\LabelTag)
+$label = (new \HtmlElements\Tag\Tag\LabelTag)
     ->addClass('form-check-label')
     ->setAttr('for', 'flexCheckDefault')
     ->setContent('Default checkbox');
 
-$button = (new \HtmlElements\Base\SECTag('button'))
+$button = (new \HtmlElements\Tag\Base\SECTag('button'))
     ->setAttr('type', 'button')
     ->addClass('btn btn-primary')
     ->setContent('Primary');
