@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class FormTag extends Base\ElementSEC
+class FormTag extends Base\SECTag
 {
     public function __construct()
     {

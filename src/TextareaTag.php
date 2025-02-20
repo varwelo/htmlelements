@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class TextareaTag extends Base\ElementSEC
+class TextareaTag extends Base\SECTag
 {   
     public function __construct()
     {

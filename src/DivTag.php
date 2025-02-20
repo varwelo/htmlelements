@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class DivTag extends Base\ElementSEC
+class DivTag extends Base\SECTag
 {
     public function __construct()
     {

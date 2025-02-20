@@ -2,7 +2,7 @@
 
 namespace HtmlElements\Base;
 
-class ElementS extends BaseElementS
+class STag extends BaseSTag
 {   
     public function render(): string
     {

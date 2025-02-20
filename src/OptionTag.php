@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class OptionTag extends Base\ElementSEC
+class OptionTag extends Base\SECTag
 {   
     public function __construct()
     {

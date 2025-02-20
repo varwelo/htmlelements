@@ -2,13 +2,13 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ElementSETest extends TestCase
+class SETagTest extends TestCase
 {
     private $obj;
 
     protected function setUp(): void
     {
-        $this->obj = new \HtmlElements\Base\ElementSE('div');
+        $this->obj = new \HtmlElements\Base\SETag('div');
     }
 
     protected function tearDown(): void

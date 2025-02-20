@@ -4,7 +4,7 @@ use \PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../includes/tAccessToPrivate.php';
 
-class tStartTagTest extends TestCase
+class tTagAttrsTest extends TestCase
 {
     use tAccessToPrivate;
 

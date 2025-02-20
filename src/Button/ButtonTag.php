@@ -5,7 +5,7 @@ namespace HtmlElements\Button;
 
 use HtmlElements\Base;
 
-class ButtonTag extends Base\ElementSEC
+class ButtonTag extends Base\SECTag
 {
     public function __construct()
     {

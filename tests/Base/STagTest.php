@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../includes/tAccessToPrivate.php';
 
-class ElementSTest extends TestCase
+class STagTest extends TestCase
 {
     use tAccessToPrivate;
 
@@ -12,7 +12,7 @@ class ElementSTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->obj = new \HtmlElements\Base\ElementS('input');
+        $this->obj = new \HtmlElements\Base\STag('input');
     }
 
     protected function tearDown(): void

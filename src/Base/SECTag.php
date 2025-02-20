@@ -2,7 +2,7 @@
 
 namespace HtmlElements\Base;
 
-class ElementSEC extends ElementSE
+class SECTag extends SETag
 {   
     private string $content = '';
 

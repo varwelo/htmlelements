@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class InputTag extends Base\ElementS
+class InputTag extends Base\STag
 {      
     public function __construct()
     {

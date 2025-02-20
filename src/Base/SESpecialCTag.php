@@ -2,7 +2,7 @@
 
 namespace HtmlElements\Base;
 
-abstract class ElementSESpecialC extends ElementSE
+abstract class SESpecialCTag extends SETag
 {
     abstract public function render();
 }

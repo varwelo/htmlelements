@@ -22,7 +22,7 @@ include HEADER;
 <strong>За допомогою HtmlElements</strong>
 
 <?php
-$div = (new \HtmlElements\Base\ElementSEC('div'))
+$div = (new \HtmlElements\Base\SECTag('div'))
     ->addClass('form-check');
 
 $input = (new \HtmlElements\InputTag())
@@ -36,7 +36,7 @@ $label = (new \HtmlElements\LabelTag)
     ->setAttr('for', 'flexCheckDefault')
     ->setContent('Default checkbox');
 
-$button = (new \HtmlElements\Base\ElementSEC('button'))
+$button = (new \HtmlElements\Base\SECTag('button'))
     ->setAttr('type', 'button')
     ->addClass('btn btn-primary')
     ->setContent('Primary');

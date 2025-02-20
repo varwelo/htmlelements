@@ -4,7 +4,7 @@
 namespace HtmlElements\Base;
 
 
-abstract class BaseElementS implements iTagAttrs
+abstract class BaseSTag implements iTagAttrs
 {
     use tTagAttrs;
 

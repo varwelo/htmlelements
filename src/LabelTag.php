@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class LabelTag extends Base\ElementSEC
+class LabelTag extends Base\SECTag
 {   
     public function __construct()
     {

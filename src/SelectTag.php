@@ -2,7 +2,7 @@
 
 namespace HtmlElements;
 
-class SelectTag extends Base\ElementSESpecialC
+class SelectTag extends Base\SESpecialCTag
 {
     /**
      * @var OptionTag[]

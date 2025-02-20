@@ -97,6 +97,5 @@ trait tTagAttrs
         
         return $result;
     }
-    
     /* --- Робота з атрибутами (та атрибутом class) END-- --- */
 }

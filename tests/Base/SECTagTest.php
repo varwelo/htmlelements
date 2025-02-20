@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../includes/tAccessToPrivate.php';
 
-class ElementSECTest extends TestCase
+class SECTagTest extends TestCase
 {
     use tAccessToPrivate;
 
@@ -12,7 +12,7 @@ class ElementSECTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->obj = new \HtmlElements\Base\ElementSEC('textarea');
+        $this->obj = new \HtmlElements\Base\SECTag('textarea');
     }
 
     protected function tearDown(): void
