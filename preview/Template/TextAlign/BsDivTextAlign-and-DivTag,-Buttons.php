@@ -30,7 +30,7 @@ EOL;
 echo '<hr>'.PHP_EOL;
 
 $buttonButton = new \HtmlElements\Tag\TagPlus\Button\ButtonButtonTag();
-(new \HtmlElements\Template\TextAlign\BsTextAlignTemplate())->applyForTag($buttonButton);
+(new \HtmlElements\Template\BsButton\BsButtonTemplate())->applyForButtonTag($buttonButton);
 
 
 $divTag = new \HtmlElements\Tag\Tag\DivTag();
