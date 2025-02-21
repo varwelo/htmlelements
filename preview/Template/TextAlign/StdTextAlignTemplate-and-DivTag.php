@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../../core/start.php';
 
-echo '<h1>StdTextAlignTemplate</h1>' . PHP_EOL;
+echo '<h1>StdTextAlignTemplate and DivTag</h1>' . PHP_EOL;
 
 echo '<hr>' . PHP_EOL;
 

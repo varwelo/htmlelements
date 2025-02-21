@@ -4,7 +4,7 @@ require __DIR__ . '/../../core/start.php';
 
 include HEADER;
 
-echo '<h1>BsTextAlignTemplate</h1>'.PHP_EOL;
+echo '<h1>BsTextAlignTemplate and DivTag</h1>'.PHP_EOL;
 
 echo '<hr>'.PHP_EOL;
 
