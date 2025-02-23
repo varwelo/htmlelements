@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../../core/start.php';
+require __DIR__ . '/../../../core/start.php';
 
 echo '<h1>SubmitButtonTag</h1>'.PHP_EOL;
 
