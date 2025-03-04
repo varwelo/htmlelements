@@ -1,5 +1,9 @@
 <?php
 
+
+namespace HtmlElements\Tests\Includes;
+
+
 trait tAccessToPrivate
 {
     private $privateProperty;

@@ -1,13 +1,14 @@
 <?php
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+
+namespace HtmlElements\Tests\Template\TextAlign;
 
 
 use PHPUnit\Framework\TestCase;
 
 class BaseTextAlignTemplateTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private $obj;
 

@@ -1,18 +1,20 @@
 <?php
 
-use \PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+namespace HtmlElements\Tests\Tag\Base;
+
+
+use \PHPUnit\Framework\TestCase;
 
 class tTagAttrsTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private $obj;
 
     protected function setUp(): void
     {
-        $this->obj = new class () { use HtmlElements\Tag\Base\tTagAttrs; };
+        $this->obj = new class () { use \HtmlElements\Tag\Base\tTagAttrs; };
     }
 
     protected function tearDown(): void

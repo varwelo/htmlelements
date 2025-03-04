@@ -1,5 +1,9 @@
 <?php
 
+
+namespace HtmlElements\Tests\Tag\Base;
+
+
 use PHPUnit\Framework\TestCase;
 
 class SETagTest extends TestCase

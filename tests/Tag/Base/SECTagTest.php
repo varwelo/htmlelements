@@ -1,12 +1,14 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+namespace HtmlElements\Tests\Tag\Base;
+
+
+use PHPUnit\Framework\TestCase;
 
 class SECTagTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private $obj;
 
@@ -70,7 +72,7 @@ class SECTagTest extends TestCase
      */
     public function testSetContentWithTypeError($value)
     {
-        $this->expectException(TypeError::class);
+        $this->expectException(\TypeError::class);
         $this->obj->setContent($value);
     }
 

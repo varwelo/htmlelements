@@ -1,12 +1,14 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+namespace HtmlElements\Tests\Tag\Base;
+
+
+use PHPUnit\Framework\TestCase;
 
 class BaseSTagTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private $obj;
 

@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+
+namespace HtmlElements\Tests\Template\BsButton;
 
 
 use HtmlElements\Template\BsButton\BsResetButtonTemplate;
@@ -8,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class BsResetButtonTemplateTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private BsResetButtonTemplate $obj;
 

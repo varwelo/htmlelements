@@ -1,5 +1,9 @@
 <?php
 
+
+namespace HtmlElements\Tests\Tag\SpecialTag;
+
+
 use PHPUnit\Framework\TestCase;
 
 class DivTagForButtonsTest extends TestCase
@@ -57,7 +61,7 @@ EOL;
 
     public function testAddButtonThrowException()
     {
-        $this->expectException(TypeError::class);
+        $this->expectException(\TypeError::class);
         $invalidObject = new class {};
         $this->obj->addButton($invalidObject);
     }

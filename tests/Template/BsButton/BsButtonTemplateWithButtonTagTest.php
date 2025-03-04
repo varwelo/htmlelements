@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+
+namespace HtmlElements\Tests\Template\BsButton;
 
 
 use HtmlElements\Tag\Tag\ButtonTag;
@@ -9,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 class BsButtonTemplateWithButtonTagTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private BsButtonTemplate $bsButtonTemplate;
 

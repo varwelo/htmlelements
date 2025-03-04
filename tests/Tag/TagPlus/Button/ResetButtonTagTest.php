@@ -1,5 +1,9 @@
 <?php
 
+
+namespace HtmlElements\Tests\TagPlus\Button;
+
+
 use PHPUnit\Framework\TestCase;
 
 class ResetButtonTagTest extends TestCase

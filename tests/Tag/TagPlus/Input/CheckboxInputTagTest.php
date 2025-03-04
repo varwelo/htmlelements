@@ -1,5 +1,9 @@
 <?php
 
+
+namespace HtmlElements\Tests\TagPlus\Input;
+
+
 use PHPUnit\Framework\TestCase;
 
 class CheckboxInputTagTest extends TestCase

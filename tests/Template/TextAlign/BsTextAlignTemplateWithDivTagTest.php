@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+
+namespace HtmlElements\Tests\Template\TextAlign;
 
 
 use HtmlElements\Tag\Tag\DivTag;

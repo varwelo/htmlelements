@@ -1,13 +1,14 @@
 <?php
 
-require_once __DIR__ . '/../../includes/tAccessToPrivate.php';
+
+namespace HtmlElements\Tests\Tag\Tag;
 
 
 use PHPUnit\Framework\TestCase;
 
 class FormSETagTest extends TestCase
 {
-    use tAccessToPrivate;
+    use \HtmlElements\Tests\Includes\tAccessToPrivate;
 
     private $obj;
 
@@ -23,7 +24,7 @@ class FormSETagTest extends TestCase
 
     public function testRenderNotExists()
     {
-        $this->expectException(Error::class);
+        $this->expectException(\Error::class);
         $this->expectExceptionMessage('Call to undefined method HtmlElements\Tag\Tag\FormSETag::render()');
         $this->obj->render();
     }
